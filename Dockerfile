@@ -5,7 +5,7 @@ MAINTAINER Totentanz604 "Totentanz604@mt2015.com"
 RUN apt-get update -y && \
 	apt-get upgrade -y && \
 	apt-get install -y wget curl python mercurial git sqlite3 mlocate sudo apt-utils mc vim screen man python-software-properties colordiff bash-completion apt-file  apt-transport-https ca-certificates && \
-	apt-get apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
+	apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
 	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | tee /etc/apt/sources.list.d/docker.list && \
 	apt-get update && \
 	apt-get install -y docker-engine docker-compose && \
