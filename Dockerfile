@@ -10,7 +10,7 @@ RUN apt-get update -y && \
 	apt-get update && \
 	apt-get install -y docker-engine docker-compose && \
 	adduser --disabled-password --gecos "" totentanz && \
-	echo "totentanz\tALL=(ALL:ALL) ALL\n" > /etc/sudoers.d/totentanz && \
+	echo "totentanz\tALL=(ALL:ALL) NOPASSWD: ALL\n" > /etc/sudoers.d/totentanz && \
     chmod 0440 /etc/sudoers.d/totentanz && \
     mkdir /home/totentanz/.ssh && \
     chown totentanz:totentanz /home/totentanz/.ssh && \
