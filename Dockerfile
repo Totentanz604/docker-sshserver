@@ -8,7 +8,7 @@ RUN apt-get update -y && \
 	apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
 	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | tee /etc/apt/sources.list.d/docker.list && \
 	apt-get update && \
-	apt-get install -y docker-engine docker-compose && \
+	apt-get install -y docker-engine=1.11.1-0~xenial docker-compose && \
 	adduser --disabled-password --gecos "" totentanz && \
 	echo "totentanz\tALL=(ALL:ALL) NOPASSWD: ALL\n" > /etc/sudoers.d/totentanz && \
     chmod 0440 /etc/sudoers.d/totentanz && \
