@@ -1,6 +1,6 @@
 FROM phusion/baseimage:latest
 
-MAINTAINER Totentanz604 "Totentanz604@mt2015.com"
+MAINTAINER Totentanz604 "totentech@gmail.com"
 
 RUN apt-get update -y && \
 	apt-get upgrade -y && \
