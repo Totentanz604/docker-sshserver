@@ -23,4 +23,7 @@ RUN apt-get update -y && \
 	echo "set number" >> /home/totentanz/.vimrc && \
 	echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAsP3Op/ugCLNOO8Y27mrL2NhsDtYAHIBromLyFZVp7BW/5XC1xkpRqrrYQaokoi6cOo2T2oa0JdFF4jc+/tHhCl0BfcbTESR2YD6QuUbCZggM7CUZVl+TOnz6lZWg/PzFHpUy3saPMeMPj+drKLlybIHu56ZSdRPJKDoRuNxhJtm7rJu0T4iD7ypCBBoiTsTA02xODyHm3V5+Hnpv8x+tN60K97gkysmUgVMYkOjmtTVVVcKtaJmMoIBFolPhvpL1WJcnxrrEIp+vO2QkSF7AnRgr81G8BYUV98pHBgU7MctgkBpV4P/4l8NoAKFTEz5q9JLmzr5dNr67e5V39xBvxQ== rsa-key-20170316 Totentanz@WORK" >> /home/totentanz/.ssh/authorized_keys && \
 	echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAkxvKp3RKx9MOH31rKyr9rkxyxJxNybNgFcRmg/D6mJpmmuWYeptB3NFqSVo+JhgZpZVGhpMCe9Kk3zNIuUDQ++VieWNR4/cXH4wfP4RO8btJ54xrxz2w/uK0UPNSRFju2cqPJs1zaUhszf+/Jd6IQFq6REcv2Aex2gpEyN+4Lv68NFjNmQ39Fgyxc8I++IC7utOJ7Ak00HMMPlAc+AQHBO/DGJCrLesP38tEv6DLRYhrYxUd0bp0Q8jvOwDlx56NBKNWYnMx+Sf0z4RijwubUhbKuxK3UGcVYaE34MaXP9CbWarQs+NeYravOD1HYV9e1Ym6zA1sTWXxHb0NUd0PzQ== Totentanz@TOTENTANZ-PC" >> /home/totentanz/.ssh/authorized_keys && \
+	echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDpNs2xeG8zNYQbXkoUj+Ry4XQ06bjaH/gR5HEzz9GFDpeW8r/nnO4A4Ii2AU8EOHEcUxJtsjmSzYZD2/q4h1dhZDQHjapuzMtH/QlQtiJBMvROvu64R5M6r7OYXmynVPUere7SPp4LK34YAJ5RypGx9obnS/Nh9htoCLX6/u9clZ/6odrwzTR9VV7w5koqasNRQKsiYvwx9R/4mcF0Hy5HCB/in/wMQY0DmMeCx12Fzksqt9cz8RW0Eq6WRRQwkh7IprMxx7I5dEqcVNbarhdMCS7bXvbHhQHgW47tchEEfutdxmmUCfhSXy4IdXtY8iK9tXnLLIsJg378+nqq/g2b Totentanz@IPHONE" >> /home/totentanz/.ssh/authorized_keys && \
 	rm -f /etc/service/sshd/down
+
+	
