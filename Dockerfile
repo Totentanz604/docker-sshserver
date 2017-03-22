@@ -9,7 +9,7 @@ RUN apt-get update -y && \
 	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | tee /etc/apt/sources.list.d/docker.list && \
 	apt-get update && \
 	apt-get install -y docker-engine=1.11.1-0~xenial docker-compose && \
-	bash -c "`curl -sL https://raw.githubusercontent.com/michaelsauter/crane/master/download.sh`" && sudo mv crane /usr/local/bin/crane
+	bash -c "`curl -sL https://raw.githubusercontent.com/michaelsauter/crane/master/download.sh`" && sudo mv crane /usr/local/bin/crane && \
 	adduser --disabled-password --gecos "" totentanz && \
 	echo "totentanz\tALL=(ALL:ALL) NOPASSWD: ALL\n" > /etc/sudoers.d/totentanz && \
     chmod 0440 /etc/sudoers.d/totentanz && \
