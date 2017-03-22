@@ -9,6 +9,7 @@ RUN apt-get update -y && \
 	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | tee /etc/apt/sources.list.d/docker.list && \
 	apt-get update && \
 	apt-get install -y docker-engine=1.11.1-0~xenial docker-compose && \
+	bash -c "`curl -sL https://raw.githubusercontent.com/michaelsauter/crane/master/download.sh`" && sudo mv crane /usr/local/bin/crane
 	adduser --disabled-password --gecos "" totentanz && \
 	echo "totentanz\tALL=(ALL:ALL) NOPASSWD: ALL\n" > /etc/sudoers.d/totentanz && \
     chmod 0440 /etc/sudoers.d/totentanz && \
@@ -26,4 +27,5 @@ RUN apt-get update -y && \
 	echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDpNs2xeG8zNYQbXkoUj+Ry4XQ06bjaH/gR5HEzz9GFDpeW8r/nnO4A4Ii2AU8EOHEcUxJtsjmSzYZD2/q4h1dhZDQHjapuzMtH/QlQtiJBMvROvu64R5M6r7OYXmynVPUere7SPp4LK34YAJ5RypGx9obnS/Nh9htoCLX6/u9clZ/6odrwzTR9VV7w5koqasNRQKsiYvwx9R/4mcF0Hy5HCB/in/wMQY0DmMeCx12Fzksqt9cz8RW0Eq6WRRQwkh7IprMxx7I5dEqcVNbarhdMCS7bXvbHhQHgW47tchEEfutdxmmUCfhSXy4IdXtY8iK9tXnLLIsJg378+nqq/g2b Totentanz@IPHONE" >> /home/totentanz/.ssh/authorized_keys && \
 	rm -f /etc/service/sshd/down
 
+	
 	
