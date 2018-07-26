@@ -27,7 +27,7 @@ RUN rm -f /etc/service/sshd/down
 RUN sudo -u totentanz -H mkdir /home/totentanz/dev
 RUN sudo -u totentanz -H git clone https://github.com/banga/powerline-shell /home/totentanz/dev/powerline-shell
 RUN cd /home/totentanz/dev/powerline-shell
-RUN sudo -u totentanz -H ./install.py
+RUN sudo -u totentanz -H ./setup.py
 RUN echo "function _update_ps1() {  PS1=\"\$(~/dev/powerline-shell/powerline-shell.py \$? 2> /dev/null)\"; }" >> /home/totentanz/.bashrc
 RUN echo "if [ \"\$TERM\" != linux ]; then PROMPT_COMMAND=\"_update_ps1; \$PROMPT_COMMAND\"; fi" >> /home/totentanz/.bashrc
 RUN chown totentanz:totentanz /home/totentanz/.bashrc
