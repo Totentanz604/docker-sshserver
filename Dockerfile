@@ -24,10 +24,4 @@ RUN echo "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \
 RUN echo "set number" >> /home/totentanz/.vimrc
 RUN echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAwc1GIcOy0WP9NNl8BvDiJ4Kgz43V2Ops8lZJpJj9zrD9csuNOlNYmMnZM7x1XSE9oq5D0yPCC8QzbbPaIxmgoaISog+ZtqkhYeeC/vi/4oaLSOxbfvNTZYQjE3tArP06Ah7kqJpoNc5m5jTkXrRxNUWD5Mz3yRIE86H6muub16e/PMFOWOcsf3RmcyKS8nwGjKRsf4Jegt8yOSun8DS55KE9pUTlmY+W+mDQVkfKH5akoQ0dEhEdJdWgUZogChZaRHDy3y2A6OALS65IBY4O6UqlDKuXOZBliz5gO8RRnekHy9mlB4OW5HwckMOZZwfRtEvNvPE/l3zlqB842RdFZQ== Totentanz@TOTENTANZ-PC" >> /home/totentanz/.ssh/authorized_keys
 RUN rm -f /etc/service/sshd/down
-RUN sudo -u totentanz -H mkdir /home/totentanz/dev
-RUN sudo -u totentanz -H git clone https://github.com/b-ryan/powerline-shell /home/totentanz/dev/powerline-shell
-RUN cd /home/totentanz/dev/powerline-shell
-RUN sudo -u totentanz -H python setup.py install
-RUN echo "function _update_ps1() {  PS1=\"\$(~/dev/powerline-shell/powerline-shell.py \$? 2> /dev/null)\"; }" >> /home/totentanz/.bashrc
-RUN echo "if [ \"\$TERM\" != linux ]; then PROMPT_COMMAND=\"_update_ps1; \$PROMPT_COMMAND\"; fi" >> /home/totentanz/.bashrc
 RUN chown totentanz:totentanz /home/totentanz/.bashrc
